@@ -1,3 +1,10 @@
+/* Assignment: C11A-1
+ * Authors: Haleema Elsayed, Mimi Rai
+ * MyDrawings Class
+ * Main method and creating a new cat object
+ * 
+ */
+
 import java.awt.Graphics;
 
 import javax.swing.JFrame;

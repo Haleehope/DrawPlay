@@ -48,6 +48,17 @@ public class Cat {
 		x = catX + MOUTH_X;
 		y = catY + MOUTH_Y;
 		g2.fillOval(x, y, MOUTH_WIDTH, MOUTH_HEIGHT);
+		
+		
+		//Ears of the cat
+		int[] xPointsLeftEar = { catX + HEAD_DIMENSION / 4, catX + HEAD_DIMENSION / 2, catX + HEAD_DIMENSION / 6 };
+        int[] xPointsRightEar = { catX + HEAD_DIMENSION*3 / 4, catX + HEAD_DIMENSION / 2, catX + HEAD_DIMENSION*5 / 6 };
+        int[] yPointsEar = { catY-HEAD_DIMENSION/5, (int) (catY), (int)(catY +HEAD_DIMENSION/10 )};
+
+        g2.setColor(Color.magenta);
+		g2.fillPolygon(xPointsLeftEar, yPointsEar, xPointsLeftEar.length); //left ear
+		g2.fillPolygon(xPointsRightEar, yPointsEar, xPointsRightEar.length);
+		
 		g2.setColor(Color.black);
 		// Meow text appears below cat head, +10 places below 
 		// so it doesn't overlap the drawing

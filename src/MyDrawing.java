@@ -13,15 +13,23 @@ import javax.swing.JPanel;
 
 public class MyDrawing extends JPanel {
 	private Cat cat;
+	private Cat cat2;
+	private Cat cat3;
+	
+	//constructor
 	public MyDrawing() 
 	{
 		// Add critters to the drawing
 		cat = new Cat();
+		cat2 = new Cat();
+		cat3 = new Cat();
 	}
 	// paintComponent is called automatically when the frame needs
 	// to display (e.g., when the program starts)
 	public void paintComponent(Graphics g) {
 		cat.draw(g, 50, 50);
+		cat2.draw(g, 150,  150);
+		cat3.draw(g, 500, 500);
 	}
 	
 	/**
@@ -34,7 +42,7 @@ public class MyDrawing extends JPanel {
 		// Program will end when the window is closed
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		// Set the size (otherwise only title bar displays)
-		frame.setSize(400, 400);
+		frame.setSize(750, 750);
 		
 		// Frame will not display until you set visible true
 		frame.setVisible(true);
